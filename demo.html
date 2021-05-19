@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="swiper/index.css">
+    <style>
+        .item1 {
+            background-color: red;
+        }
+        
+        .item2 {
+            background-color: powderblue;
+        }
+        
+        .item3 {
+            background-color: rosybrown;
+        }
+        
+        .item4 {
+            background-color: darkcyan;
+        }
+        .item{
+            height: 100%;
+            text-align: center;
+            line-height: 400px;
+            font-size: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .wrapper {
+            width: 500px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 50px auto;
+            font-family: 'iconfont';
+            /* Project id 2547686 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        -封装轮播图插件---只要会用jquery就行
+        封装插件的步骤：
+            1.明确插件的使用方法
+            2.明确插件的参数
+                    - 大小不同  height 
+                    - 轮播的内容不同  list  [domlist]
+                    - 自动轮播时间的不同  timer
+                    - 是否有小圆点  showSpots: true/false
+                    - 轮播效果不同 type：animate/fade
+                    - 是否自动轮播 isAuto : true/false
+                    - 左右按钮显示的状态不同：changeBtnStatus: always/hide/hover
+                    - 小圆点的位置和样式  spotsPosition: left/center/right
+
+
+
+            $.extend({
+                swiper:function(){}
+            });// 工具方法,单纯的方法，直接调用
+            $.swiper({})
+
+            $.fn.extend({
+                swiper:function(){}
+            })//实例对象 jquery构建的事例对象进行调用
+            等同于：
+            $.fn == $.prototype
+            $().swiper()
+
+     -->
+    <div class="wrapper"></div>
+
+    <div class="item item1"><img class="focus-item-img" src="//img13.360buyimg.com/pop/s590x470_jfs/t1/179406/30/4608/73098/60a213c6Eb21ac783/93a188681072cf6f.jpg.webp"></div>
+    <div class="item item2"><img class="focus-item-img" src="//imgcps.jd.com/ling4/100012043978/5Lqs6YCJ5aW96LSn/5L2g5YC85b6X5oul5pyJ/p-5bd8253082acdd181d02f9d0/c5756eed/cr/s/q.jpg"></div>
+    <div class="item item3"><img class="focus-item-img" src="//img14.360buyimg.com/pop/s590x470_jfs/t1/168731/10/13238/36620/6051b78cE48030fa9/75433d5be5e57989.jpg.webp"></div>
+    <div class="item item4"><img class="focus-item-img" src="//img11.360buyimg.com/pop/s590x470_jfs/t1/193682/38/2690/43656/609c9235E5bfb8def/65460c7d12a13c63.jpg.webp"></div>
+
+
+    <script src="js/jquery-3.4.1.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+        //这就是一个实例对象
+        $('.wrapper').swiper({
+            width: 500,
+            height: 400,
+            list: $('.item'),
+            temers: 3000,
+            showSpots: true,
+            type: 'animate',
+            isAuto: true,
+            changeBtnStatus: 'hover',
+            spotsPosition: 'center'
+        })
+    </script>
+
+</body>
+
+</html>

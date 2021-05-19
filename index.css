@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 2547686 */
+    src: url('//at.alicdn.com/t/font_2547686_n35i4dgtrmc.woff2?t=1620959706066') format('woff2'), url('//at.alicdn.com/t/font_2547686_n35i4dgtrmc.woff?t=1620959706066') format('woff'), url('//at.alicdn.com/t/font_2547686_n35i4dgtrmc.ttf?t=1620959706066') format('truetype');
+}
+
+.my-swiper-btn {
+    font-family: 'iconfont';
+    /* Project id 2547686 */
+    position: absolute;
+    top: 50%;
+    width: 25px;
+    height: 35px;
+    line-height: 35px;
+    margin-top: -17.5px;
+    background-color: rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+    cursor: pointer;
+}
+.my-swiper-btn:hover{
+    background-color: rgba(0,0,0,0.4  );
+}
+
+.my-swiper-rbtn{
+    right: 0;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+  
+}
+.my-swiper-lbtn{
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+   
+}
+
+.my-swiper-wrapper{
+    overflow: hidden;
+    position: relative;
+}
+
+.my-swiper-wrapper > ul {
+    padding: 0;
+    margin: 0;
+}
+/* 大于号 直接子元素 */
+.my-swiper-wrapper > ul >li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.my-swiper-animate .my-swiper-content{
+    position: absolute;
+    left: 0;
+}
+.my-swiper-animate .my-swiper-content::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.my-swiper-animate .my-swiper-item {
+    float: left;
+}
+
+
+.my-swiper-fade .my-swiper-content{
+    position: relative;
+}
+.my-swiper-fade .my-swiper-item {
+    position: absolute;
+}
+.my-swiper-spots{
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    line-height: 20px;
+    padding: 10px 20px;
+    left: 0;
+    right: 0;
+    /* text-align: center; */
+    
+}
+.my-swiper-spots span{
+    background-color: #ccc;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 2px;
+
+}
+
+.my-swiper-spots .my-swiper-current{
+    background-color: red;
+}
